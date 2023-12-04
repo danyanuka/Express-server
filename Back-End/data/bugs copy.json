@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "abc123",
+    "title": "Cannot save a Car",
+    "severity": 3,
+    "createdAt": 1542107359454
+  },
+  {
+    "_id": "abc124",
+    "title": "Cannot save a Car",
+    "severity": 5,
+    "createdAt": 1542107346754
+  },
+  {
+    "_id": "abc125",
+    "title": "Cannot save a Car",
+    "severity": 7,
+    "createdAt": 1542107346754
+  },
+  {
+    "_id": "abc126",
+    "title": "Cannot save a Car",
+    "severity": 1,
+    "createdAt": 1542107432454
+  }
+]
