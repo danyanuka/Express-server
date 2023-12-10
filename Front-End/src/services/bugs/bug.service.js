@@ -1,4 +1,4 @@
-import { utilService } from "./util.service.js";
+import { utilService } from "../util.service.js";
 import Axios from "axios";
 
 const axios = Axios.create({

@@ -1,4 +1,4 @@
-import { bugService } from "../services/bug.service.js";
+import { bugService } from "../services/bugs/bug.service.js";
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import { BugList } from "../cmps/BugList";
 import { BugFilter } from "../cmps/BugFilter";

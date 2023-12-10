@@ -2,7 +2,7 @@
   {
     "_id": "abc126",
     "title": "Cannot save a Car",
-    "severity": 2,
+    "severity": 3,
     "createdAt": 1542107432454
   },
   {
@@ -39,17 +39,5 @@
       "CR-NOW"
     ],
     "createdAt": 1701881974785
-  },
-  {
-    "title": "5th Bug",
-    "description": "app crashes when user refresh",
-    "severity": 10,
-    "labels": [
-      "common",
-      "urgent",
-      "red"
-    ],
-    "createdAt": 1701977372087,
-    "_id": "hBWgg"
   }
 ]

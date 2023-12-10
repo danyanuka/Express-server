@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "u108",
+    "fullname": "Dan Yanuka",
+    "username": "dan123",
+    "password": "0192Dan",
+    "score": 100
+  },
+  {
+    "_id": "u109",
+    "fullname": "Nitzan shemo",
+    "username": "nitz0192",
+    "password": "nitznitz2023",
+    "score": 20
+  },
+  {
+    "_id": "u102",
+    "fullname": "Dan Cohen",
+    "username": "dan123456",
+    "password": "0192Dani",
+    "score": 50
+  },
+  {
+    "_id": "u103",
+    "fullname": "Eli Levi",
+    "username": "eli123",
+    "password": "1e2l3i",
+    "score": 200
+  }
+]
