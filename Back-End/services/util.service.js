@@ -10,13 +10,6 @@ function makeId(length = 5) {
   }
   return text;
 }
-// Takes the queryParams, making an object out of it and also changes Strings to Numbers if needed.
-function queryToObject(query) {
-  return Object.entries(query).reduce((acc, [key, value]) => {
-    acc[key] = !isNaN(+value) ? +value : value;
-    return acc;
-  }, {});
-}
 
 function readJsonFile(path) {
   const str = fs.readFileSync(path, "utf8");
@@ -36,7 +29,6 @@ function saveJsonFile(bugs, path) {
 
 export const utilService = {
   makeId,
-  queryToObject,
   readJsonFile,
   saveJsonFile,
 };

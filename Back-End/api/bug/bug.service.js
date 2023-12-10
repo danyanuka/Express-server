@@ -1,15 +1,34 @@
-import { utilService } from "./util.service.js";
+import { utilService } from "../../services/util.service.js";
 
-const bugs = utilService.readJsonFile("./data/bugs.json");
+let bugs = utilService.readJsonFile("./data/bugs.json");
+const PAGE_SIZE = 4;
 
-async function query() {
+async function query(filterBy = {}) {
+  let bugsToFilter = [...bugs];
   try {
-    return bugs;
+    if (filterBy.text) {
+      bugsToFilter = bugsToFilter.filter((bug) =>
+        bug.title.toLowerCase().includes(filterBy.text.toLowerCase())
+      );
+    }
+
+    if (filterBy.severity) {
+      bugsToFilter = bugsToFilter.filter(
+        (bug) => bug.severity === filterBy.severity
+      );
+    }
+
+    if (filterBy.pageIdx) {
+      const startIdx = filterBy.pageIdx * PAGE_SIZE;
+      bugsToFilter = bugsToFilter.slice(startIdx, startIdx + PAGE_SIZE);
+    }
+    return bugsToFilter;
   } catch (err) {
     console.log(err);
     throw err;
   }
 }
+
 async function getById(bugId) {
   try {
     const bug = bugs.find((bug) => bug._id === bugId);

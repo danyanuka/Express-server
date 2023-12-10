@@ -1,9 +1,55 @@
 [
   {
-    "_id": "abc123",
+    "_id": "abc126",
     "title": "Cannot save a Car",
-    "severity": 3,
-    "createdAt": 1542107359454,
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aperiam quo veniam velit dolor reprehenderit, laudantium consequatur neque numquam labore quae. Accusamus libero perferendis ducimus? Alias unde hic quisquam doloremque."
+    "severity": 2,
+    "createdAt": 1542107432454
+  },
+  {
+    "_id": "Wg5cP",
+    "title": "Bag bug",
+    "description": "Problems when saving",
+    "severity": 5,
+    "labels": [
+      "ciritical",
+      "need-CR",
+      "dev-branch"
+    ],
+    "createdAt": 1701867328837
+  },
+  {
+    "title": "Worst bug",
+    "description": "Problems when fetching",
+    "severity": 5,
+    "labels": [
+      "ciritical",
+      "need-CR-now",
+      "dev-branch"
+    ],
+    "createdAt": 1701869879195,
+    "_id": "k1Ocr"
+  },
+  {
+    "_id": "d0NMk",
+    "title": "New bug",
+    "description": "Terrible Bug",
+    "severity": 5,
+    "labels": [
+      "URGENT",
+      "CR-NOW"
+    ],
+    "createdAt": 1701881974785
+  },
+  {
+    "title": "5th Bug",
+    "description": "app crashes when user refresh",
+    "severity": 10,
+    "labels": [
+      "common",
+      "urgent",
+      "red"
+    ],
+    "createdAt": 1701977372087,
+    "_id": "hBWgg"
   }
 ]

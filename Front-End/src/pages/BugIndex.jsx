@@ -10,9 +10,14 @@ import { useSearchParams } from "react-router-dom";
 export function BugIndex() {
   const [bugs, setBugs] = useState([]);
   const [SearchParams, setSearchParams] = useSearchParams();
-  const [filterBy, setFilterBy] = useState(
-    bugService.getFilterFromParams(SearchParams)
-  );
+  const [filterBy, setFilterBy] = useState(() => {
+    const queryFilter = bugService.getFilterFromParams(SearchParams);
+    return {
+      ...queryFilter,
+      pageIdx:
+        queryFilter.pageIdx === "undefined" ? undefined : +queryFilter.pageIdx,
+    };
+  });
 
   useEffect(() => {
     setSearchParams(filterBy);
@@ -42,7 +47,9 @@ export function BugIndex() {
       title: prompt("Bug title?"),
       severity: +prompt("Bug severity?"),
       description: prompt("Describe the Bug"),
+      labels: prompt("Enter labels seperated by commas: (Critical,Common)..."),
     };
+    bug.labels = bug.labels.split(",").map((label) => label.trim());
     try {
       const savedBug = await bugService.save(bug);
       console.log("Added Bug", savedBug);
@@ -76,6 +83,12 @@ export function BugIndex() {
     setFilterBy((prevFilter) => ({ ...prevFilter, ...fieldsToUpdate }));
   }
 
+  function onChangePageIdx(pageIdx) {
+    setFilterBy((prev) => ({ ...prev, pageIdx: pageIdx }));
+  }
+
+  const isPaging = filterBy.pageIdx !== undefined;
+
   return (
     <main className="main-layout">
       <h3>Bugs App</h3>
@@ -83,6 +96,25 @@ export function BugIndex() {
         <button onClick={onAddBug}>Add Bug ⛐</button>
         <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
         <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
+        <label>
+          Paging
+          <input
+            type="checkbox"
+            checked={isPaging}
+            onChange={() => onChangePageIdx(isPaging ? undefined : 0)}
+          />
+          {isPaging && (
+            <>
+              <button onClick={() => onChangePageIdx(filterBy.pageIdx - 1)}>
+                Prev
+              </button>
+              <span>{filterBy.pageIdx + 1}</span>
+              <button onClick={() => onChangePageIdx(filterBy.pageIdx + 1)}>
+                Next
+              </button>
+            </>
+          )}
+        </label>
       </main>
     </main>
   );

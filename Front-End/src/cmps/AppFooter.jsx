@@ -1,18 +1,14 @@
-import { useEffect } from 'react'
-import { showSuccessMsg } from '../services/event-bus.service'
+import { useEffect } from "react";
+import { showSuccessMsg } from "../services/event-bus.service";
 
-export function AppFooter () {
+export function AppFooter() {
+  useEffect(() => {
+    // component did mount when dependancy array is empty
+  }, []);
 
-    useEffect(() => {
-        // component did mount when dependancy array is empty
-    }, [])
-
-    return (
-        <footer>
-            <p>
-                coffeerights to all
-            </p>
-        </footer>
-    )
-
+  return (
+    <footer style={{ marginTop: "20px", marginLeft: " 25px" }}>
+      <p>coffeerights to all</p>
+    </footer>
+  );
 }
