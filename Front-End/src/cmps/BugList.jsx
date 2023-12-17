@@ -1,8 +1,12 @@
-
-import { Link } from 'react-router-dom'
-import { BugPreview } from './BugPreview'
+import { Link } from "react-router-dom";
+import { BugPreview } from "./BugPreview";
+import { useCookies } from "react-cookie";
+import { useEffect } from "react";
 
 export function BugList({ bugs, onRemoveBug, onEditBug }) {
+  // const [coockies] = useCookies(["visitedBugs"]);
+  // const visitedBugs = coockies.visitedBugs || [];
+
   return (
     <ul className="bug-list">
       {bugs.map((bug) => (
@@ -11,22 +15,26 @@ export function BugList({ bugs, onRemoveBug, onEditBug }) {
           <div>
             <button
               onClick={() => {
-                onRemoveBug(bug._id)
+                onRemoveBug(bug._id);
               }}
             >
               x
             </button>
             <button
               onClick={() => {
-                onEditBug(bug)
+                onEditBug(bug);
               }}
             >
               Edit
             </button>
           </div>
+          {/* {visitedBugs.length < 4 ? ( */}
           <Link to={`/bug/${bug._id}`}>Details</Link>
+          {/* ) : (
+            <p>Wait 7 sec</p>
+          )} */}
         </li>
       ))}
     </ul>
-  )
+  );
 }

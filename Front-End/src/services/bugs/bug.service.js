@@ -16,17 +16,25 @@ export const bugService = {
 };
 // Get List
 async function query(filterBy) {
+  let sortBy = filterBy.sortBy;
   try {
     let { data: bugs } = await axios.get(BASE_URL, { params: filterBy });
-    // if (filterBy.text) {
-    //   bugs = bugs.filter((bug) =>
-    //     bug.title.toLowerCase().includes(filterBy.text.toLowerCase())
-    //   );
-    // }
+    console.log(filterBy);
 
-    // if (filterBy.severity) {
-    //   bugs = bugs.filter((bug) => bug.severity === filterBy.severity);
-    // }
+    if (sortBy.type === "severity") {
+      bugs.sort((b1, b2) => (b1.severity - b2.severity) * sortBy.dir);
+    }
+
+    if (sortBy.type === "alphabet") {
+      bugs.sort((b1, b2) =>
+        b1.title.toLowerCase().localeCompare(b2.title.toLowerCase())
+      );
+    }
+
+    if (sortBy.type === "date") {
+      bugs.sort((b1, b2) => (b1.createdAt - b2.createdAt) * sortBy.dir);
+    }
+
     return bugs;
   } catch (err) {
     console.log(err);
@@ -40,7 +48,7 @@ async function getById(bugId) {
     const { data: bug } = await axios.get(url);
     return bug;
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 }
 
@@ -68,7 +76,12 @@ async function save(bug) {
 }
 
 function getDefaultFilter() {
-  return { text: "", severity: "", pageIdx: undefined };
+  return {
+    text: "",
+    severity: "",
+    pageIdx: undefined,
+    sortBy: { type: "", dir: 1 },
+  };
 }
 
 function getFilterFromParams(searchParams) {

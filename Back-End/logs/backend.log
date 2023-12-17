@@ -1,0 +1,41 @@
+13.12.2023, 14:20:47 - ERROR - Couldnt find a bug with id: g5es
+14.12.2023, 17:38:32 - DEBUG - auth.service - signup with username : danydan, fullname : Dan Yanuka
+14.12.2023, 17:38:32 - ERROR - Failed to signupReferenceError: JSONstringify is not defined
+14.12.2023, 17:43:54 - DEBUG - auth.service - signup with username : shlomi222, fullname : shlomi dadon
+14.12.2023, 17:43:54 - DEBUG - auth.route - new ccount created :{"username":"shlomi222","password":"$2b$10$GIbU4L/O9HA.lZBToS3YluKjlSJc/0GBAODzI3zki8bTxDoO/hqgS","fullname":"shlomi dadon","_id":"yNLcC","score":10000}
+14.12.2023, 17:43:54 - ERROR - Failed to signupTypeError: res.coockie is not a function
+14.12.2023, 17:43:54 - INFO - User signup :[object Object]
+14.12.2023, 17:46:13 - DEBUG - auth.service - signup with username : shlomki222, fullname : shlomki dadon
+14.12.2023, 17:46:14 - DEBUG - auth.route - new ccount created :{"username":"shlomki222","password":"$2b$10$R2Vfot/VdmWnog0uiK2W4OTVfgHPC97Nnxg2b2ULpLmcMfUX3WwBS","fullname":"shlomki dadon","_id":"XGwLE","score":10000}
+14.12.2023, 17:46:14 - INFO - User signup :[object Object]
+14.12.2023, 17:53:31 - DEBUG - auth.service - signup with username : shlomya303, fullname : shlomki Yanuka
+14.12.2023, 17:53:32 - DEBUG - auth.route - new ccount created :{"username":"shlomya303","password":"$2b$10$rzIqXdAEdzQsuV7mkvBndeneYO0HGAScQWOY8bnUL2N2VH7NMLwXi","fullname":"shlomki Yanuka","_id":"9Yvhl","score":10000}
+14.12.2023, 17:53:32 - INFO - User signup :[object Object]
+14.12.2023, 17:56:08 - DEBUG - auth.service - signup with username : shlomya3d03, fullname : shlomki Banuka
+14.12.2023, 17:56:08 - DEBUG - auth.route - new ccount created :[object Object]
+14.12.2023, 17:56:08 - INFO - User signup : | {"_id":"3cWQu","fullname":"shlomki Banuka"}
+14.12.2023, 18:24:34 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:25:40 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:30:26 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:32:45 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:34:42 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:34:59 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:37:59 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:49:53 - ERROR - Failed to log in Unknown username
+14.12.2023, 18:51:09 - DEBUG - auth.service - signup with username : Risan, fullname : Risan Benichou
+14.12.2023, 18:51:10 - DEBUG - auth.route - new ccount created :{"username":"Risan","password":"$2b$10$meoc/vL9i49VFkwBd3wIXey2yytB1C6lWOA7UbXfZMGDj5JJJKmh2","fullname":"Risan Benichou","_id":"L6dLR","score":10000}
+14.12.2023, 18:51:10 - INFO - User signup :  | {"_id":"L6dLR","fullname":"Risan Benichou"}
+14.12.2023, 18:52:58 - DEBUG - auth.service - signup with username : Risan, fullname : Risan Benichou
+14.12.2023, 18:52:58 - ERROR - Failed to signup Username already taken
+14.12.2023, 18:56:44 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:03:07 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:04:45 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:05:15 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+14.12.2023, 19:06:19 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:07:54 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:11:28 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:27:14 - ERROR - Failed to log in Unknown username
+14.12.2023, 19:30:24 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+14.12.2023, 19:40:15 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+14.12.2023, 20:02:35 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+14.12.2023, 20:12:47 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}

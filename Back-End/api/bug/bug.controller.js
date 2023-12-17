@@ -8,6 +8,8 @@ export async function getBugs(req, res) {
       severity: +req.query.severity || 0,
       pageIdx: req.query.pageIdx || undefined,
     };
+    console.log(req.query);
+
     const bugs = await bugService.query(filterBy);
     res.send(bugs);
   } catch (err) {
@@ -18,18 +20,29 @@ export async function getBugs(req, res) {
 // GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID-----GetByID
 export async function getBug(req, res) {
   const { bugId } = req.params;
+
+  let visitedBugs = [...(req.cookies.visitedBugs || []), bugId];
+  console.log("User visited :", visitedBugs);
   try {
     const bug = await bugService.getById(bugId);
+    res.cookie("visitedBugs", visitedBugs, { maxAge: 1000 * 7 });
+    if (visitedBugs.length > 3) {
+      throw new Error("Wait 7 seconds to view more bugs");
+    }
     res.send(bug);
   } catch (err) {
-    res.status(400).send("Couldnt get bug");
+    if (err.message === "Wait 7 seconds to view more bugs") {
+      res.status(401).send(err.message);
+    } else {
+      res.status(400).send("Couldn't get bug by ID");
+    }
   }
 }
 
 // POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST
 export async function addBug(req, res) {
   const { title, description, severity, labels } = req.body;
-  const createdAt = new Date().getTime();
+  const createdAt = Date.now();
   const bugToSave = {
     title,
     description,

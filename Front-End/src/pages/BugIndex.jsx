@@ -2,6 +2,7 @@ import { bugService } from "../services/bugs/bug.service.js";
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import { BugList } from "../cmps/BugList";
 import { BugFilter } from "../cmps/BugFilter";
+import { BugSort } from "../cmps/BugSort.jsx";
 
 import { useState } from "react";
 import { useEffect } from "react";
@@ -14,6 +15,7 @@ export function BugIndex() {
     const queryFilter = bugService.getFilterFromParams(SearchParams);
     return {
       ...queryFilter,
+      sortBy: {},
       pageIdx:
         queryFilter.pageIdx === "undefined" ? undefined : +queryFilter.pageIdx,
     };
@@ -86,15 +88,19 @@ export function BugIndex() {
   function onChangePageIdx(pageIdx) {
     setFilterBy((prev) => ({ ...prev, pageIdx: pageIdx }));
   }
-
+  console.log("index", filterBy);
   const isPaging = filterBy.pageIdx !== undefined;
-
+  const { text, severity, sortBy } = filterBy;
   return (
     <main className="main-layout">
       <h3>Bugs App</h3>
       <main>
         <button onClick={onAddBug}>Add Bug ⛐</button>
-        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
+        <BugFilter
+          filterBy={{ text, severity }}
+          onSetFilterBy={onSetFilterBy}
+        />
+        <BugSort sortBy={sortBy} onSetFilterBy={onSetFilterBy} />
         <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
         <label>
           Paging

@@ -1,4 +1,5 @@
 import { utilService } from "../../services/util.service.js";
+import { loggerService } from "../../services/logger.service.js";
 
 let bugs = utilService.readJsonFile("./data/bugs.json");
 const PAGE_SIZE = 4;
@@ -24,7 +25,7 @@ async function query(filterBy = {}) {
     }
     return bugsToFilter;
   } catch (err) {
-    console.log(err);
+    loggerService.error(err);
     throw err;
   }
 }
@@ -35,7 +36,7 @@ async function getById(bugId) {
     if (!bug) throw `Couldnt find a bug with id: ${bugId}`;
     return bug;
   } catch (err) {
-    console.log(err);
+    loggerService.error(err);
     throw err;
   }
 }
@@ -46,7 +47,7 @@ async function remove(bugId) {
     bugs.splice(idx, 1);
     utilService.saveJsonFile(bugs, "./data/bugs.json");
   } catch (err) {
-    console.log(err);
+    loggerService.error(err);
     throw err;
   }
 }
@@ -63,7 +64,7 @@ async function save(bugToSave) {
     utilService.saveJsonFile(bugs, "./data/bugs.json");
     return bugToSave;
   } catch (err) {
-    console.log(err);
+    loggerService.error(err);
     throw err;
   }
 }

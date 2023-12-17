@@ -1,8 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { UserMsg } from "./UserMsg";
 import { NavLink } from "react-router-dom";
 
 export function AppHeader() {
+  const [loggedInUser, setLoggerInUser] = useState();
+
+  // async function onLogin(credentials) {}
+
+  // async function onSignup(credentials) {}
+
+  // async function onLogout(credentials) {}
+
   useEffect(() => {
     // component did mount when dependancy array is empty
   }, []);

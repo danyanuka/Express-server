@@ -17,9 +17,9 @@ function readJsonFile(path) {
   return json;
 }
 
-function saveJsonFile(bugs, path) {
+function saveJsonFile(entity, path) {
   return new Promise((resolve, reject) => {
-    const data = JSON.stringify(bugs, null, 2);
+    const data = JSON.stringify(entity, null, 2);
     fs.writeFile(path, data, (err) => {
       if (err) return reject(err);
       resolve();

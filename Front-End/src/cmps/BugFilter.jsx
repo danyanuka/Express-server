@@ -13,7 +13,7 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
 
     setFilterByToEdit((prevFilter) => ({ ...prevFilter, [field]: value }));
   }
-
+  console.log(filterByToEdit);
   return (
     <form>
       <h4>Filter By:</h4>

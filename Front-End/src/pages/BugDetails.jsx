@@ -1,13 +1,17 @@
-import { useState } from "react";
 import { bugService } from "../services/bugs/bug.service.js";
 import { showErrorMsg } from "../services/event-bus.service.js";
+
+import { useState } from "react";
 import { useParams } from "react-router";
 import { useEffect } from "react";
+import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export function BugDetails() {
   const [bug, setBug] = useState(null);
   const { bugId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     loadBug();
@@ -18,7 +22,8 @@ export function BugDetails() {
       const bug = await bugService.getById(bugId);
       setBug(bug);
     } catch (err) {
-      showErrorMsg("Cannot load bug");
+      navigate("/bug");
+      showErrorMsg("Reached 3 bugs, please wait a bit");
     }
   }
 
