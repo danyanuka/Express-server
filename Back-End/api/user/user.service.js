@@ -1,5 +1,6 @@
 import { utilService } from "../../services/util.service.js";
 import { loggerService } from "../../services/logger.service.js";
+import { authService } from "../auth/auth.service.js";
 
 let users = utilService.readJsonFile("./data/users.json");
 
@@ -27,6 +28,7 @@ async function remove(userId) {
   try {
     const idx = users.findIndex((user) => user._id === userId);
     if (idx === -1) throw `Couldnt find user with id:${userId}`;
+
     users.splice(idx, 1);
     utilService.saveJsonFile(users, "./data/users.json");
   } catch (err) {

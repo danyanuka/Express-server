@@ -26,28 +26,28 @@ export function UserIndex() {
     }
   }
 
-  async function onAddUser() {
-    const user = {
-      fullname: prompt("full Name ?"),
-      username: prompt("Your username"),
-      password: prompt("Your password"),
-      score: 0,
-    };
+  // async function onAddUser() {
+  //   const user = {
+  //     fullname: prompt("full Name ?"),
+  //     username: prompt("Your username"),
+  //     password: prompt("Your password"),
+  //     score: 0,
+  //   };
 
-    try {
-      const savedUser = await userService.save(user);
-      console.log("Added user", savedUser);
-      setUsers((prevUsers) => [...prevUsers, savedUser]);
-    } catch (err) {
-      console.log("Error from onAdduser ->", err);
-    }
-  }
+  //   try {
+  //     const savedUser = await userService.save(user);
+  //     console.log("Added user", savedUser);
+  //     setUsers((prevUsers) => [...prevUsers, savedUser]);
+  //   } catch (err) {
+  //     console.log("Error from onAdduser ->", err);
+  //   }
+  // }
 
   async function onEditUser(user) {
     const password = prompt("New Password?");
     const userToSave = { ...user, password };
     try {
-      const savedUser = await userService.save(userToSave);
+      const savedUser = await userService.update(userToSave);
       console.log("Updated user:", savedUser);
       setUsers((prevUsers) =>
         prevUsers.map((currUser) =>
@@ -58,13 +58,12 @@ export function UserIndex() {
       console.log("Error from onEditUser ->", err);
     }
   }
-  console.log("users from index : ", users);
 
   return (
     <main className="main-layout">
       <h3>users App</h3>
       <main>
-        <button onClick={onAddUser}>Register ⛐</button>
+        {/* <button onClick={onAddUser}>Register ⛐</button> */}
 
         <UserList
           users={users}

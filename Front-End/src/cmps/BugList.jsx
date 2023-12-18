@@ -1,38 +1,51 @@
 import { Link } from "react-router-dom";
+
 import { BugPreview } from "./BugPreview";
-import { useCookies } from "react-cookie";
-import { useEffect } from "react";
+import { userService } from "../services/users/user.service";
 
 export function BugList({ bugs, onRemoveBug, onEditBug }) {
-  // const [coockies] = useCookies(["visitedBugs"]);
-  // const visitedBugs = coockies.visitedBugs || [];
+  const loggedinUser = userService.getLoggedinUser();
+  console.log(loggedinUser);
+
+  function isOwnedByUser(bug) {
+    return (
+      loggedinUser?.isAdmin ||
+      (loggedinUser && loggedinUser._id === bug.owner._id)
+    );
+  }
 
   return (
     <ul className="bug-list">
       {bugs.map((bug) => (
         <li className="bug-preview" key={bug._id}>
           <BugPreview bug={bug} />
-          <div>
-            <button
-              onClick={() => {
-                onRemoveBug(bug._id);
-              }}
-            >
-              x
-            </button>
-            <button
-              onClick={() => {
-                onEditBug(bug);
-              }}
-            >
-              Edit
-            </button>
-          </div>
-          {/* {visitedBugs.length < 4 ? ( */}
-          <Link to={`/bug/${bug._id}`}>Details</Link>
-          {/* ) : (
-            <p>Wait 7 sec</p>
-          )} */}
+          {isOwnedByUser(bug) ? (
+            <div>
+              <button
+                onClick={() => {
+                  onRemoveBug(bug._id);
+                }}
+              >
+                x
+              </button>
+              <button
+                onClick={() => {
+                  onEditBug(bug);
+                }}
+              >
+                Edit
+              </button>
+            </div>
+          ) : (
+            <p>Log in for full access</p>
+          )}
+
+          <Link
+            style={{ backgroundColor: "rgb(233, 206, 221)" }}
+            to={`/bug/${bug._id}`}
+          >
+            Details
+          </Link>
         </li>
       ))}
     </ul>

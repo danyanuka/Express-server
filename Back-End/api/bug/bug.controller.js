@@ -1,3 +1,4 @@
+import { authService } from "../auth/auth.service.js";
 import { bugService } from "./bug.service.js";
 
 // lIST-----LIST-----lIST-----LIST-----lIST-----LIST-----lIST-----LIST-----lIST-----LIST-----lIST-----LIST-----lIST-----LIST-----LIST
@@ -42,49 +43,45 @@ export async function getBug(req, res) {
 // POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST-----POST
 export async function addBug(req, res) {
   const { title, description, severity, labels } = req.body;
-  const createdAt = Date.now();
+
   const bugToSave = {
     title,
     description,
     severity: +severity,
     labels,
-    createdAt,
   };
   try {
-    const savedBug = await bugService.save(bugToSave);
+    const savedBug = await bugService.save(bugToSave, req.loggedinUser);
     res.send(savedBug);
   } catch (err) {
-    res.status(400).send("Could't save bug");
+    res.status(400).send("Could't save bug" + err);
   }
 }
 
 // UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE
 export async function updateBug(req, res) {
   const { bugId } = req.params;
-  const { title, description, severity, labels, createdAt } = req.body;
+  const { severity } = req.body;
   const bugToSave = {
     _id: bugId,
-    title,
-    description,
     severity: +severity,
-    labels,
-    createdAt,
   };
   try {
-    const savedBug = await bugService.save(bugToSave);
+    const savedBug = await bugService.save(bugToSave, req.loggedinUser);
     res.send(savedBug);
   } catch (err) {
-    res.status(400).send("Could't save bug");
+    res.status(400).send("Could't save bug" + err);
   }
 }
 
 // DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE-----DELETE
 export async function removeBug(req, res) {
   const { bugId } = req.params;
+
   try {
-    await bugService.remove(bugId);
+    await bugService.remove(bugId, req.loggedinUser);
     res.send("Bug Deleted");
   } catch (err) {
-    res.status(400).send("Couldt remove bug");
+    res.status(400).send("Couldt remove bug " + err);
   }
 }

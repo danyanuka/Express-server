@@ -10,6 +10,7 @@ export const authService = {
   signup,
   login,
   getLoginToken,
+  validateToken,
 };
 
 async function signup({ username, password, fullname }) {
@@ -31,12 +32,14 @@ async function login(username, password) {
   const user = await userService.getByUsername(username);
   if (!user) throw "Unknown username";
 
-  const match = await bcrypt.compare(password, user.password);
-  if (!match) throw "Invalid username or password";
+  // Commented for development!
+  // const match = await bcrypt.compare(password, user.password);
+  // if (!match) throw "Invalid username or password";
 
   const miniUser = {
     _id: user._id,
     fullname: user.fullname,
+    isAdmin: user.isAdmin,
   };
   return miniUser;
 }
@@ -45,4 +48,15 @@ function getLoginToken(user) {
   const str = JSON.stringify(user);
   const encryptedStr = cryptr.encrypt(str);
   return encryptedStr;
+}
+
+function validateToken(token) {
+  try {
+    const json = cryptr.decrypt(token);
+    const loggedinUser = JSON.parse(json);
+    return loggedinUser;
+  } catch (err) {
+    console.log("Invalid login token");
+  }
+  return null;
 }

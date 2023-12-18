@@ -21,7 +21,7 @@ export function BugSort({ sortBy, onSetFilterBy }) {
       dir: dirValue,
     }));
   }
-  console.log(sortByToEdit);
+
   return (
     <form style={{ backgroundColor: "rgb(233, 206, 221)", width: "465px" }}>
       <label htmlFor="sortBy" style={{ marginLeft: "5px" }}>

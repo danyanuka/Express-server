@@ -55,10 +55,11 @@ export function BugIndex() {
     try {
       const savedBug = await bugService.save(bug);
       console.log("Added Bug", savedBug);
+      // if (!savedBug) return;
       setBugs((prevBugs) => [...prevBugs, savedBug]);
       showSuccessMsg("Bug added");
     } catch (err) {
-      console.log("Error from onAddBug ->", err);
+      console.log("Error from onAddBug ->", err.response.data);
       showErrorMsg("Cannot add bug");
     }
   }
@@ -68,7 +69,7 @@ export function BugIndex() {
     const bugToSave = { ...bug, severity };
     try {
       const savedBug = await bugService.save(bugToSave);
-      console.log("Updated Bug:", savedBug);
+      // if (!savedBug) return;
       setBugs((prevBugs) =>
         prevBugs.map((currBug) =>
           currBug._id === savedBug._id ? savedBug : currBug
@@ -88,9 +89,10 @@ export function BugIndex() {
   function onChangePageIdx(pageIdx) {
     setFilterBy((prev) => ({ ...prev, pageIdx: pageIdx }));
   }
-  console.log("index", filterBy);
+
   const isPaging = filterBy.pageIdx !== undefined;
   const { text, severity, sortBy } = filterBy;
+  if (!bugs) return <div>Loading...</div>;
   return (
     <main className="main-layout">
       <h3>Bugs App</h3>

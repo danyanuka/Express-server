@@ -19,7 +19,6 @@ async function query(filterBy) {
   let sortBy = filterBy.sortBy;
   try {
     let { data: bugs } = await axios.get(BASE_URL, { params: filterBy });
-    console.log(filterBy);
 
     if (sortBy.type === "severity") {
       bugs.sort((b1, b2) => (b1.severity - b2.severity) * sortBy.dir);
@@ -72,6 +71,7 @@ async function save(bug) {
     return savedBug;
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }
 

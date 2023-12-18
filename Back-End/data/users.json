@@ -1,38 +1,24 @@
 [
   {
-    "username": "danydan",
-    "password": "$2b$10$OJsrkPr.P1pcdS6i38m7q.ho6XIdqZv1iwr05gHgocMM/QxYlQsuW",
-    "fullname": "Dan Yanuka",
-    "_id": "zL2zJ",
-    "score": 10000
-  },
-  {
-    "username": "shlomi222",
-    "password": "$2b$10$GIbU4L/O9HA.lZBToS3YluKjlSJc/0GBAODzI3zki8bTxDoO/hqgS",
-    "fullname": "shlomi dadon",
-    "_id": "yNLcC",
-    "score": 10000
-  },
-  {
-    "username": "shlomki222",
-    "password": "$2b$10$R2Vfot/VdmWnog0uiK2W4OTVfgHPC97Nnxg2b2ULpLmcMfUX3WwBS",
-    "fullname": "shlomki dadon",
-    "_id": "XGwLE",
-    "score": 10000
-  },
-  {
-    "username": "shlomya303",
-    "password": "$2b$10$rzIqXdAEdzQsuV7mkvBndeneYO0HGAScQWOY8bnUL2N2VH7NMLwXi",
-    "fullname": "shlomki Yanuka",
-    "_id": "9Yvhl",
-    "score": 10000
-  },
-
-  {
     "username": "Risan",
     "password": "$2b$10$meoc/vL9i49VFkwBd3wIXey2yytB1C6lWOA7UbXfZMGDj5JJJKmh2",
     "fullname": "Risan Benichou",
     "_id": "L6dLR",
+    "score": 10000
+  },
+  {
+    "username": "Danyan",
+    "password": "$2b$10$jwivswT/I0xkIElQ.M8sk.SrkPwhZk9b1Rv.Vu9Pt1Bp.pR.SdT3i",
+    "fullname": "Dan Yanuka",
+    "_id": "sk2iz",
+    "score": 10000,
+    "isAdmin": true
+  },
+  {
+    "username": "Nitz1999",
+    "password": "$2b$10$hGzVxof6pD9x3k0IBHtV8OTE0dKlWYJ9KpxzViE4pu2uAFT9.Kaui",
+    "fullname": "Nitzan Prince ",
+    "_id": "ohue6",
     "score": 10000
   }
 ]

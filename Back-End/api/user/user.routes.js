@@ -1,4 +1,5 @@
 import express from "express";
+import { requireAdmin } from "../../middlewares/requireAuth.middleware.js";
 
 import {
   getUsers,
@@ -10,10 +11,10 @@ import {
 
 const router = express.Router();
 
-router.get("/", getUsers);
-router.get("/:userId", getUser);
-router.post("/", addUser);
-router.put("/:userId", updateUser);
-router.delete("/:userId", removeUser);
+router.get("/", requireAdmin, getUsers);
+router.get("/:userId", requireAdmin, getUser);
+router.post("/", requireAdmin, addUser);
+router.put("/:userId", requireAdmin, updateUser);
+router.delete("/:userId", requireAdmin, removeUser);
 
 export const userRoutes = router;

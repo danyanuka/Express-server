@@ -39,3 +39,89 @@
 14.12.2023, 19:40:15 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
 14.12.2023, 20:02:35 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
 14.12.2023, 20:12:47 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+17.12.2023, 14:41:25 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+17.12.2023, 14:41:35 - ERROR - Couldnt find bug with id:abcdd
+17.12.2023, 14:43:50 - ERROR - Couldnt find bug with id:abcdd
+17.12.2023, 16:16:50 - ERROR - Failed to log in Invalid username or password
+17.12.2023, 16:20:55 - ERROR - Failed to log in Invalid username or password
+17.12.2023, 16:25:18 - ERROR - Failed to log in Invalid username or password
+17.12.2023, 16:30:09 - ERROR - Failed to log in Invalid username or password
+17.12.2023, 16:32:50 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+17.12.2023, 16:33:09 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+17.12.2023, 16:42:00 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+17.12.2023, 16:42:56 - DEBUG - auth.service - signup with username : Nitz1999, fullname : Nitzan Prince 
+17.12.2023, 16:42:56 - DEBUG - auth.route - new ccount created :{"username":"Nitz1999","password":"$2b$10$hGzVxof6pD9x3k0IBHtV8OTE0dKlWYJ9KpxzViE4pu2uAFT9.Kaui","fullname":"Nitzan Prince ","_id":"ohue6","score":10000}
+17.12.2023, 16:42:56 - INFO - User signup :  | {"_id":"ohue6","fullname":"Nitzan Prince "}
+17.12.2023, 16:50:58 - DEBUG - auth.service - signup with username : shani199, fullname : Shani Weiss
+17.12.2023, 16:50:58 - DEBUG - auth.route - new ccount created :{"username":"shani199","password":"$2b$10$QvQmtU8BdIZOwtquxU13Pe87u2tieTSGxwmyRY2QW2VrHvCWNYkPe","fullname":"Shani Weiss","_id":"7XQf6","score":10000}
+17.12.2023, 16:50:58 - INFO - User signup :  | {"_id":"7XQf6","fullname":"Shani Weiss"}
+17.12.2023, 17:07:05 - INFO - User login : | {"_id":"7XQf6","fullname":"Shani Weiss"}
+17.12.2023, 17:37:24 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+17.12.2023, 17:38:45 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+17.12.2023, 17:43:03 - INFO - User login : | {"_id":"XGwLE","fullname":"shlomki dadon"}
+17.12.2023, 18:06:27 - DEBUG - auth.service - signup with username : test1999, fullname : Test
+17.12.2023, 18:06:27 - DEBUG - auth.route - new ccount created :{"username":"test1999","password":"$2b$10$33vjVq7M53y0LO.VCVBvpOHH9UdK9h9qebNT38Wdf8g3OWVB4mzRy","fullname":"Test","_id":"sU2lF","score":10000}
+17.12.2023, 18:06:27 - INFO - User signup :  | {"_id":"sU2lF","fullname":"Test"}
+17.12.2023, 18:09:48 - ERROR - ReferenceError: loggedinUser is not defined
+17.12.2023, 18:33:41 - DEBUG - auth.service - signup with username : test333, fullname : Test
+17.12.2023, 18:33:41 - DEBUG - auth.route - new ccount created :{"username":"test333","password":"$2b$10$0Ay6JvxuM5XAm.Ip8PeEOu9Xu7ITETcGPE12LB1QcHuDI3ZSXPPhS","fullname":"Test","_id":"fb2WS","score":10000}
+17.12.2023, 18:33:41 - INFO - User signup :  | {"_id":"fb2WS","fullname":"Test"}
+17.12.2023, 18:36:43 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+17.12.2023, 19:17:04 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+17.12.2023, 19:17:26 - ERROR - Couldnt find bug with id:abc123
+18.12.2023, 13:20:27 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 13:20:46 - ERROR - Couldnt find bug with id:abc123
+18.12.2023, 13:21:23 - ERROR - TypeError: Cannot read properties of undefined (reading '_id')
+18.12.2023, 13:24:41 - DEBUG - auth.service - signup with username : Danyan, fullname : Dan Yanuka
+18.12.2023, 13:24:41 - DEBUG - auth.route - new ccount created :{"username":"Danyan","password":"$2b$10$jwivswT/I0xkIElQ.M8sk.SrkPwhZk9b1Rv.Vu9Pt1Bp.pR.SdT3i","fullname":"Dan Yanuka","_id":"sk2iz","score":10000}
+18.12.2023, 13:24:41 - INFO - User signup :  | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 13:26:17 - ERROR - Not your bug
+18.12.2023, 13:26:25 - ERROR - Not your bug
+18.12.2023, 13:28:21 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+18.12.2023, 13:29:23 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 13:29:27 - ERROR - Not your bug
+18.12.2023, 13:29:58 - ERROR - Not your bug
+18.12.2023, 13:32:10 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 13:59:20 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 14:14:22 - ERROR - Not your bug
+18.12.2023, 14:17:23 - ERROR - CarService[save] :  | Not your bug
+18.12.2023, 14:18:39 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 14:19:40 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 14:20:07 - ERROR - CarService[save] :  | Not your bug
+18.12.2023, 14:20:17 - ERROR - CarService[save] :  | Not your bug
+18.12.2023, 15:09:41 - ERROR - CarService[save] :  | Not your bug
+18.12.2023, 15:09:58 - ERROR - CarService[save] :  | TypeError: Cannot read properties of undefined (reading '_id')
+18.12.2023, 15:10:31 - ERROR - CarService[Remove] :  | TypeError: Cannot read properties of undefined (reading '_id')
+18.12.2023, 15:10:37 - ERROR - CarService[Remove] :  | TypeError: Cannot read properties of undefined (reading '_id')
+18.12.2023, 15:14:32 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 15:46:58 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+18.12.2023, 15:52:37 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+18.12.2023, 15:57:03 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 15:57:31 - INFO - User login : | {"_id":"zL2zJ","fullname":"Dan Yanuka"}
+18.12.2023, 16:01:20 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 17:33:42 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 17:34:08 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 17:35:47 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 17:36:10 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 17:36:48 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 17:39:18 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka"}
+18.12.2023, 18:42:10 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 18:53:31 - ERROR - CarService[Remove] :  | Not your bug
+18.12.2023, 18:54:09 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+18.12.2023, 18:54:45 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 18:55:06 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 18:55:54 - ERROR - Failed to log in Invalid username or password
+18.12.2023, 18:56:06 - ERROR - Failed to log in ReferenceError: match is not defined
+18.12.2023, 18:56:28 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 18:56:30 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 18:57:07 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+18.12.2023, 19:13:50 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 19:42:59 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+18.12.2023, 19:51:34 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+18.12.2023, 20:09:20 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 20:09:41 - ERROR - ReferenceError: req is not defined
+18.12.2023, 20:36:16 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+18.12.2023, 20:37:18 - WARN - Risan Benichou tried to perform admin action
+18.12.2023, 20:37:23 - WARN - Risan Benichou tried to perform admin action
+18.12.2023, 20:37:26 - WARN - Risan Benichou tried to perform admin action
+18.12.2023, 20:37:43 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}

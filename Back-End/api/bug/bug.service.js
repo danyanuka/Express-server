@@ -40,31 +40,46 @@ async function getById(bugId) {
     throw err;
   }
 }
-async function remove(bugId) {
+async function remove(bugId, loggedinUser) {
   try {
     const idx = bugs.findIndex((bug) => bug._id === bugId);
     if (idx === -1) throw `Couldnt find bug with id:${bugId}`;
+
+    console.log(loggedinUser);
+    const bug = bugs[idx];
+    if (!loggedinUser.isAdmin && bug.owner._id !== loggedinUser._id)
+      throw "Not your bug";
+
     bugs.splice(idx, 1);
     utilService.saveJsonFile(bugs, "./data/bugs.json");
   } catch (err) {
-    loggerService.error(err);
+    loggerService.error("CarService[Remove] : ", err);
     throw err;
   }
 }
-async function save(bugToSave) {
+async function save(bugToSave, loggedinUser) {
   try {
     if (bugToSave._id) {
       const idx = bugs.findIndex((bug) => bug._id === bugToSave._id);
       if (idx === -1) throw `Couldnt find bug with id:${bugToSave._id}`;
-      bugs.splice(idx, 1, bugToSave);
+
+      const bug = bugs[idx];
+      if (bug.owner._id !== loggedinUser._id) throw "Not your bug";
+
+      const updatedBug = { ...bug, ...bugToSave };
+      bugs.splice(idx, 1, updatedBug);
+      utilService.saveJsonFile(bugs, "./data/bugs.json");
+      return updatedBug;
     } else {
       bugToSave._id = utilService.makeId();
+      bugToSave.createdAt = Date.now();
+      bugToSave.owner = loggedinUser;
       bugs.push(bugToSave);
+      utilService.saveJsonFile(bugs, "./data/bugs.json");
+      return bugToSave;
     }
-    utilService.saveJsonFile(bugs, "./data/bugs.json");
-    return bugToSave;
   } catch (err) {
-    loggerService.error(err);
+    loggerService.error("CarService[save] : ", err);
     throw err;
   }
 }

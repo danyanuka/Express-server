@@ -1,73 +1,26 @@
 [
   {
-    "_id": "abc126",
-    "title": "Cannot save a Car",
-    "severity": 5,
-    "createdAt": 1542107432454
-  },
-  {
-    "_id": "Wg5cP",
-    "title": "Bag bug",
+    "title": "Risans Bug",
     "description": "Problems when saving",
-    "severity": 0,
-    "labels": [
-      "ciritical",
-      "need-CR",
-      "dev-branch"
-    ],
-    "createdAt": 1701867328837
+    "severity": 300,
+    "labels": ["ciritical", "need-CR", "dev-branch"],
+    "_id": "ITtxP",
+    "createdAt": 1702833458604,
+    "owner": {
+      "_id": "L6dLR",
+      "fullname": "Risan Benichou"
+    }
   },
   {
-    "_id": "k1Ocr",
-    "title": "Worst bug",
-    "description": "Problems when fetching",
-    "severity": 2,
-    "labels": [
-      "ciritical",
-      "need-CR-now",
-      "dev-branch"
-    ],
-    "createdAt": 1701869879195
-  },
-  {
-    "_id": "d0NMk",
-    "title": "New bug",
-    "description": "Terrible Bug",
-    "severity": 1,
-    "labels": [
-      "URGENT",
-      "CR-NOW"
-    ],
-    "createdAt": 1701881974785
-  },
-  {
-    "title": "3rd if by date",
-    "description": "s",
-    "severity": 3,
-    "labels": [
-      "d"
-    ],
-    "createdAt": 1702315868772,
-    "_id": "ZS53r"
-  },
-  {
-    "title": "2nd if by date",
-    "description": "f",
-    "severity": 0,
-    "labels": [
-      "f"
-    ],
-    "createdAt": 1702315876975,
-    "_id": "APxJQ"
-  },
-  {
-    "title": "1st if by date ",
-    "description": "f",
-    "severity": 0,
-    "labels": [
-      "f"
-    ],
-    "createdAt": 1702315882822,
-    "_id": "TiJpD"
+    "_id": "blQKX",
+    "severity": 300,
+    "title": "Dans bug",
+    "description": "Problems when saving",
+    "labels": ["ciritical", "need-CR", "dev-branch"],
+    "createdAt": 1702900792418,
+    "owner": {
+      "_id": "sk2iz",
+      "fullname": "Dan Yanuka"
+    }
   }
 ]

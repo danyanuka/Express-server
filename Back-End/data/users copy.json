@@ -1,30 +1,31 @@
 [
   {
-    "_id": "u108",
+    "username": "Risan",
+    "password": "$2b$10$meoc/vL9i49VFkwBd3wIXey2yytB1C6lWOA7UbXfZMGDj5JJJKmh2",
+    "fullname": "Risan Benichou",
+    "_id": "L6dLR",
+    "score": 10000
+  },
+  {
+    "username": "Nitz1999",
+    "password": "$2b$10$hGzVxof6pD9x3k0IBHtV8OTE0dKlWYJ9KpxzViE4pu2uAFT9.Kaui",
+    "fullname": "Nitzan Prince ",
+    "_id": "ohue6",
+    "score": 10000
+  },
+  {
+    "username": "shani199",
+    "password": "$2b$10$QvQmtU8BdIZOwtquxU13Pe87u2tieTSGxwmyRY2QW2VrHvCWNYkPe",
+    "fullname": "Shani Weiss",
+    "_id": "7XQf6",
+    "score": 10000
+  },
+
+  {
+    "username": "Danyan",
+    "password": "$2b$10$jwivswT/I0xkIElQ.M8sk.SrkPwhZk9b1Rv.Vu9Pt1Bp.pR.SdT3i",
     "fullname": "Dan Yanuka",
-    "username": "dan123",
-    "password": "0192Dan",
-    "score": 100
-  },
-  {
-    "_id": "u109",
-    "fullname": "Nitzan shemo",
-    "username": "nitz0192",
-    "password": "nitznitz2023",
-    "score": 20
-  },
-  {
-    "_id": "u102",
-    "fullname": "Dan Cohen",
-    "username": "dan123456",
-    "password": "0192Dani",
-    "score": 50
-  },
-  {
-    "_id": "u103",
-    "fullname": "Eli Levi",
-    "username": "eli123",
-    "password": "1e2l3i",
-    "score": 200
+    "_id": "sk2iz",
+    "score": 10000
   }
 ]
