@@ -125,3 +125,4 @@
 18.12.2023, 20:37:23 - WARN - Risan Benichou tried to perform admin action
 18.12.2023, 20:37:26 - WARN - Risan Benichou tried to perform admin action
 18.12.2023, 20:37:43 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+20.12.2023, 18:37:38 - ERROR - CarService[save] :  | Not your bug

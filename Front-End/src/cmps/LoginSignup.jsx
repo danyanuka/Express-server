@@ -13,6 +13,7 @@ export function LoginSignup({ onSignup, onLogin }) {
   async function loadUsers() {
     try {
       const users = await userService.query();
+      console.log(users);
       setUsers(users);
     } catch (err) {
       console.log("Had issues loading users", err);
@@ -50,7 +51,8 @@ export function LoginSignup({ onSignup, onLogin }) {
   function toggleSignup() {
     setIsSignup(!isSignup);
   }
-
+  // This line Will kill the component but prevents from crashing. WIP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+  if (!users) return;
   return (
     <div className="login-page">
       <p>

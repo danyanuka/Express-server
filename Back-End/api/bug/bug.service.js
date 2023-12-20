@@ -1,5 +1,7 @@
 import { utilService } from "../../services/util.service.js";
 import { loggerService } from "../../services/logger.service.js";
+import { dbService } from "../../services/db.service.js";
+import { ObjectId } from "mongodb";
 
 let bugs = utilService.readJsonFile("./data/bugs.json");
 const PAGE_SIZE = 4;
@@ -7,6 +9,9 @@ const PAGE_SIZE = 4;
 async function query(filterBy = {}) {
   let bugsToFilter = [...bugs];
   try {
+    const criteria = _buildCriteria(filterBy);
+    console.log(criteria);
+
     if (filterBy.text) {
       bugsToFilter = bugsToFilter.filter((bug) =>
         bug.title.toLowerCase().includes(filterBy.text.toLowerCase())
@@ -82,6 +87,18 @@ async function save(bugToSave, loggedinUser) {
     loggerService.error("CarService[save] : ", err);
     throw err;
   }
+}
+
+function _buildCriteria(filterBy) {
+  const criteria = {};
+  if (filterBy.text) {
+    criteria.title = { $regex: filterBy.text, $options: "i" };
+  }
+  if (filterBy.severity) {
+    criteria.severity = { $gt: filterBy.severity };
+  }
+
+  return criteria;
 }
 
 export const bugService = {

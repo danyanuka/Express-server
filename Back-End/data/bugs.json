@@ -3,7 +3,11 @@
     "title": "Risans Bug",
     "description": "Problems when saving",
     "severity": 300,
-    "labels": ["ciritical", "need-CR", "dev-branch"],
+    "labels": [
+      "ciritical",
+      "need-CR",
+      "dev-branch"
+    ],
     "_id": "ITtxP",
     "createdAt": 1702833458604,
     "owner": {
@@ -16,7 +20,11 @@
     "severity": 300,
     "title": "Dans bug",
     "description": "Problems when saving",
-    "labels": ["ciritical", "need-CR", "dev-branch"],
+    "labels": [
+      "ciritical",
+      "need-CR",
+      "dev-branch"
+    ],
     "createdAt": 1702900792418,
     "owner": {
       "_id": "sk2iz",

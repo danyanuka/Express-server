@@ -5,7 +5,6 @@ import { userService } from "../services/users/user.service";
 
 export function BugList({ bugs, onRemoveBug, onEditBug }) {
   const loggedinUser = userService.getLoggedinUser();
-  console.log(loggedinUser);
 
   function isOwnedByUser(bug) {
     return (

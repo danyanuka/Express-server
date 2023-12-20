@@ -9,7 +9,7 @@ export async function getBugs(req, res) {
       severity: +req.query.severity || 0,
       pageIdx: req.query.pageIdx || undefined,
     };
-    console.log(req.query);
+    // console.log(filterBy);
 
     const bugs = await bugService.query(filterBy);
     res.send(bugs);

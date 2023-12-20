@@ -5,14 +5,16 @@
     "cors": "^2.8.5",
     "crypter": "^0.2.2",
     "cryptr": "^6.3.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0"
   },
   "name": "miss-bug-back-end",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --ignore \"./data\" server.js"
+    "dev": "nodemon --ignore \"./data\" server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
