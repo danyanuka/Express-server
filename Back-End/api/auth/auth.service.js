@@ -25,7 +25,7 @@ async function signup({ username, password, fullname }) {
   if (userExists) throw "Username already taken";
 
   const hash = await bcrypt.hash(password, saltRounds);
-  return userService.save({ username, password: hash, fullname });
+  return userService.add({ username, password: hash, fullname });
 }
 
 async function login(username, password) {

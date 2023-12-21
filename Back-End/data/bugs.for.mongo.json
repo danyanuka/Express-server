@@ -4,7 +4,6 @@
     "description": "Problems when saving",
     "severity": 300,
     "labels": ["ciritical", "need-CR", "dev-branch"],
-    "_id": "ITtxP",
     "createdAt": 1702833458604,
     "owner": {
       "_id": "L6dLR",
@@ -12,12 +11,22 @@
     }
   },
   {
-    "_id": "blQKX",
     "severity": 300,
     "title": "Dans bug",
     "description": "Problems when saving",
     "labels": ["ciritical", "need-CR", "dev-branch"],
     "createdAt": 1702900792418,
+    "owner": {
+      "_id": "sk2iz",
+      "fullname": "Dan Yanuka"
+    }
+  },
+  {
+    "severity": 200,
+    "title": "Dans Bug 2",
+    "description": "Problems when Deleting",
+    "labels": ["ciritical", "need-CR", "dev-main"],
+
     "owner": {
       "_id": "sk2iz",
       "fullname": "Dan Yanuka"

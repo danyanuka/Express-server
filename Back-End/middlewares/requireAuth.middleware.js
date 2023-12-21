@@ -4,7 +4,7 @@ import { loggerService } from "../services/logger.service.js";
 export function requireAuth(req, res, next) {
   const { loginToken } = req.cookies;
   const loggedinUser = authService.validateToken(loginToken);
-  if (!loggedinUser.isAdmin) return res.status(401).send("Not logged in");
+  if (!loggedinUser) return res.status(401).send("Not logged in");
   req.loggedinUser = loggedinUser;
   next();
 }

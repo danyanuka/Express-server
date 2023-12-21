@@ -51,7 +51,7 @@ export async function addBug(req, res) {
     labels,
   };
   try {
-    const savedBug = await bugService.save(bugToSave, req.loggedinUser);
+    const savedBug = await bugService.add(bugToSave, req.loggedinUser);
     res.send(savedBug);
   } catch (err) {
     res.status(400).send("Could't save bug" + err);
@@ -61,13 +61,14 @@ export async function addBug(req, res) {
 // UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE-----UPDATE
 export async function updateBug(req, res) {
   const { bugId } = req.params;
-  const { severity } = req.body;
+  const { severity, owner } = req.body;
   const bugToSave = {
     _id: bugId,
     severity: +severity,
+    owner,
   };
   try {
-    const savedBug = await bugService.save(bugToSave, req.loggedinUser);
+    const savedBug = await bugService.update(bugToSave, req.loggedinUser);
     res.send(savedBug);
   } catch (err) {
     res.status(400).send("Could't save bug" + err);
@@ -79,8 +80,8 @@ export async function removeBug(req, res) {
   const { bugId } = req.params;
 
   try {
-    await bugService.remove(bugId, req.loggedinUser);
-    res.send("Bug Deleted");
+    const deletedCount = await bugService.remove(bugId, req.loggedinUser);
+    res.json({ message: "Bug Deleted", deletedCount });
   } catch (err) {
     res.status(400).send("Couldt remove bug " + err);
   }

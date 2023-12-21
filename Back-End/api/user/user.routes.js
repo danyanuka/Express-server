@@ -11,7 +11,7 @@ import {
 
 const router = express.Router();
 
-router.get("/", requireAdmin, getUsers);
+router.get("/", getUsers);
 router.get("/:userId", requireAdmin, getUser);
 router.post("/", requireAdmin, addUser);
 router.put("/:userId", requireAdmin, updateUser);

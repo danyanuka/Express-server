@@ -51,8 +51,8 @@ export function LoginSignup({ onSignup, onLogin }) {
   function toggleSignup() {
     setIsSignup(!isSignup);
   }
-  // This line Will kill the component but prevents from crashing. WIP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-  if (!users) return;
+
+  // if (!users) return;
   return (
     <div className="login-page">
       <p>

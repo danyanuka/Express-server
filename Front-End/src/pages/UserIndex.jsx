@@ -44,8 +44,8 @@ export function UserIndex() {
   // }
 
   async function onEditUser(user) {
-    const password = prompt("New Password?");
-    const userToSave = { ...user, password };
+    const score = prompt("New Score?");
+    const userToSave = { ...user, score };
     try {
       const savedUser = await userService.update(userToSave);
       console.log("Updated user:", savedUser);

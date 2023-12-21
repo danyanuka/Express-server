@@ -126,3 +126,60 @@
 18.12.2023, 20:37:26 - WARN - Risan Benichou tried to perform admin action
 18.12.2023, 20:37:43 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
 20.12.2023, 18:37:38 - ERROR - CarService[save] :  | Not your bug
+20.12.2023, 23:27:10 - ERROR - ReferenceError: bugs is not defined
+20.12.2023, 23:27:11 - ERROR - ReferenceError: bugs is not defined
+20.12.2023, 23:27:41 - ERROR - ReferenceError: bugs is not defined
+20.12.2023, 23:27:41 - ERROR - ReferenceError: bugs is not defined
+20.12.2023, 23:59:19 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+20.12.2023, 23:59:48 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 0:18:46 - ERROR - CarService[Remove] :  | MongoServerError: collection name has invalid type null
+21.12.2023, 0:37:19 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 15:33:01 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 15:36:28 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:37:38 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:37:57 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:38:42 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:38:58 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:39:12 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:39:16 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:39:43 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:39:56 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:40:02 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:40:11 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:40:14 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 15:40:15 - ERROR - BugService[update] :  | TypeError: Cannot read properties of undefined (reading '_id')
+21.12.2023, 17:02:27 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 17:06:12 - INFO - User login : | {"_id":"L6dLR","fullname":"Risan Benichou"}
+21.12.2023, 17:06:26 - INFO - User login : | {"_id":"sk2iz","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 17:23:31 - ERROR - ReferenceError: users is not defined
+21.12.2023, 17:25:41 - ERROR - ReferenceError: dbService is not defined
+21.12.2023, 17:27:45 - ERROR - ReferenceError: dbService is not defined
+21.12.2023, 17:27:46 - ERROR - ReferenceError: dbService is not defined
+21.12.2023, 17:30:11 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:30:13 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:30:29 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:30:58 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:31:00 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:33:06 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:33:07 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:34:08 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:37:01 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:38:05 - ERROR - TypeError: collection.toArray is not a function
+21.12.2023, 17:54:49 - DEBUG - auth.service - signup with username : royboy, fullname : Roei Jacob
+21.12.2023, 17:54:49 - ERROR - Failed to signup ReferenceError: users is not defined
+21.12.2023, 17:59:05 - DEBUG - auth.service - signup with username : royboy, fullname : Roei Jacob
+21.12.2023, 17:59:05 - DEBUG - auth.route - new ccount created :{"username":"royboy","password":"$2b$10$SsL6rZY0sHXwGNMOBJjzNu58G/9.2kp.F1GrQSKJ0j232T2DUceD6","fullname":"Roei Jacob","score":1000,"_id":"658460c9dc9bd11f97f41f22"}
+21.12.2023, 17:59:05 - INFO - User signup :  | {"_id":"658460c9dc9bd11f97f41f22","fullname":"Roei Jacob"}
+21.12.2023, 17:59:52 - INFO - User login : | {"_id":"658460c9dc9bd11f97f41f22","fullname":"Roei Jacob"}
+21.12.2023, 18:05:25 - INFO - User login : | {"_id":"65845963270e43a057c35c89","fullname":"Risan Benichou"}
+21.12.2023, 18:06:41 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka"}
+21.12.2023, 18:08:11 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 18:14:26 - INFO - User login : | {"_id":"65845963270e43a057c35c89","fullname":"Risan Benichou"}
+21.12.2023, 18:14:46 - WARN - Risan Benichou tried to perform admin action
+21.12.2023, 18:29:46 - INFO - User login : | {"_id":"65845963270e43a057c35c89","fullname":"Risan Benichou"}
+21.12.2023, 18:29:55 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}
+21.12.2023, 18:35:52 - ERROR - Failed to log in Unknown username
+21.12.2023, 18:35:57 - INFO - User login : | {"_id":"658460c9dc9bd11f97f41f22","fullname":"Roei Jacob"}
+21.12.2023, 18:36:01 - WARN - Roei Jacob tried to perform admin action
+21.12.2023, 18:40:14 - ERROR - Failed to log in Unknown username
+21.12.2023, 18:40:31 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}

@@ -43,7 +43,7 @@ export async function addUser(req, res) {
     score: +score,
   };
   try {
-    const savedUser = await userService.save(userToSave);
+    const savedUser = await userService.add(userToSave);
     res.send(savedUser);
   } catch (err) {
     res.status(400).send("Could't save bug");
@@ -62,7 +62,7 @@ export async function updateUser(req, res) {
     score: +score,
   };
   try {
-    const savedUser = await userService.save(userToSave);
+    const savedUser = await userService.update(userToSave);
     res.send(savedUser);
   } catch (err) {
     res.status(400).send("Could't save bug");
