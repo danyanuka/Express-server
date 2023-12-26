@@ -183,3 +183,19 @@
 21.12.2023, 18:36:01 - WARN - Roei Jacob tried to perform admin action
 21.12.2023, 18:40:14 - ERROR - Failed to log in Unknown username
 21.12.2023, 18:40:31 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}
+24.12.2023, 14:15:22 - ERROR - ReferenceError: byUser is not defined
+24.12.2023, 15:30:24 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}
+24.12.2023, 15:31:29 - ERROR - Failed to add review | ReferenceError: err is not defined
+24.12.2023, 15:32:36 - ERROR - msgService[add] :  | ReferenceError: aboutBugId is not defined
+24.12.2023, 15:32:36 - ERROR - Failed to add review | ReferenceError: aboutBugId is not defined
+24.12.2023, 20:09:38 - INFO - User login : | {"_id":"65845963270e43a057c35c89","fullname":"Risan Benichou"}
+24.12.2023, 20:09:48 - WARN - Risan Benichou tried to perform admin action
+24.12.2023, 20:15:09 - ERROR - Not your bug
+24.12.2023, 20:15:18 - ERROR - Not your bug
+24.12.2023, 20:15:30 - ERROR - Not your MSG
+24.12.2023, 20:27:50 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}
+26.12.2023, 12:52:27 - INFO - User login : | {"_id":"65845963270e43a057c35c89","fullname":"Risan Benichou"}
+26.12.2023, 13:34:42 - INFO - User login : | {"_id":"65845963270e43a057c35c89","fullname":"Risan Benichou"}
+26.12.2023, 13:35:02 - INFO - User login : | {"_id":"65845963270e43a057c35c8c","fullname":"Dan Yanuka","isAdmin":true}
+26.12.2023, 13:38:40 - ERROR - BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+26.12.2023, 13:39:14 - ERROR - BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer

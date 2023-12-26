@@ -22,12 +22,10 @@ async function query() {
 
 async function getById(userId) {
   try {
-    // const user = users.find((user) => user._id === userId);
     const collection = await dbService.getCollection(collectionName);
     const user = collection.findOne({ _id: new ObjectId(userId) });
 
-    // const bug = bugs.find((bug) => bug._id === bugId);
-    if (!user) throw `Couldnt find a bug with id: ${bugId}`;
+    if (!user) throw `Couldnt find a bug with id: ${userId}`;
     return user;
   } catch (err) {
     loggerService.error(err);
